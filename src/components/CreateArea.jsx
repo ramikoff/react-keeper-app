@@ -39,7 +39,7 @@ function CreateArea(props) {
   return (
     <div>
       <form className="create-note">
-        {isExpanded ? <input
+        {isExpanded ? <textarea
           name="title"
           onChange={handleChange}
           value={note.title}
