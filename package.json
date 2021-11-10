@@ -1,11 +1,13 @@
 {
-  "homepage" : "http://ramikoff.github.io/react-keeper-app",
-  "name": "using-pre-built-react-components",
+  "homepage": "http://ramikoff.github.io/react-keeper-app",
+  "name": "react-keeper-app",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "react-scripts": "3.2.0"

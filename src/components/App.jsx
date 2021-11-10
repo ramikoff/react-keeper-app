@@ -3,9 +3,10 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
+import useLocalStorage from "../hooks/useLocalStorage";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useLocalStorage("notes", []);
 
   function addNote(newNote) {
     setNotes(prevNotes => {
@@ -26,7 +27,7 @@ function App() {
       <Header />
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
-        return (
+        return (<div className="container">
           <Note
             key={index}
             id={index}
@@ -34,6 +35,7 @@ function App() {
             content={noteItem.content}
             onDelete={deleteNote}
           />
+          </div>
         );
       })}
       <Footer />
